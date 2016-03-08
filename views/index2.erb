@@ -6,17 +6,8 @@
       <th>name</th>
     </tr>
 
-    <% form_for @account.each do |f| %>
-      <tr>
-        <td><%= f.label :id %></td>
-        <td><%= f.text_field :id %></td>
-        
-        <td><%= f.label :name %></td>
-        <td><%= f.text_field :name %></td>
-        
-         <%= f.submit "Save" %>
-      </tr>
-    <% end %>
+   puts @account.name 
+   
   </table>
 
 </div>
