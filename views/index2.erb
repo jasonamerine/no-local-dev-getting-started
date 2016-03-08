@@ -6,7 +6,7 @@
       <th>id</th>
       <th>Name</th>
     </tr>
-    <% @accounts.each do |account| %>
+    <% account = Account.find(id: params[id: "1"])
       <% form_for @account.each do |f| %>
         <tr>
           <td><%= f.label :name %></td>
