@@ -8,8 +8,8 @@ class Account < ActiveRecord::Base
   self.table_name = 'salesforce.account'
 end
 
-get "/accounts" do
-  @accounts = Account.all
+get "/account" do
+  @account = Account.where(id: "1")
   erb :index2
 end
 
