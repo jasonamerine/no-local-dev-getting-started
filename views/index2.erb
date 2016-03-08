@@ -6,11 +6,15 @@
       <th>name</th>
     </tr>
 
-    <% @contacts.each do |contact| %>
+    <% form_for @account.each do |f| %>
       <tr>
-        <td><%= contact.firstname %></td>
-        <td><%= contact.lastname %></td>
-        <td><%= contact.email %></td>
+        <td><%= f.label :id %></td>
+        <td><%= f.text_field :id %></td>
+        
+        <td><%= f.label :name %></td>
+        <td><%= f.text_field :name %></td>
+        
+         <%= f.submit "Save" %>
       </tr>
     <% end %>
   </table>
