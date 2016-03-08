@@ -1,19 +1,18 @@
-
 <div class="container">
 
   <table>
     <tr>
       <th>id</th>
-      <th>Name</th>
+      <th>name</th>
     </tr>
-    <% account = Account.find(id: params[id: "1"])
-      <% form_for @account.each do |f| %>
-        <tr>
-          <td><%= f.label :name %></td>
-           <td><%= f.text_field :name %></td>
-        </tr>
-         <%= f.submit "Save" %>
-      <% end %>
+
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.firstname %></td>
+        <td><%= contact.lastname %></td>
+        <td><%= contact.email %></td>
+      </tr>
+    <% end %>
   </table>
 
 </div>
